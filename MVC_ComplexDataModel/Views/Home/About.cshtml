@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Statistic of Student";
+}
+<h2>Student Body Statistic</h2>
+<table class="table table-striped">
+    <tr>
+        <th>Enrollment Date</th>
+        <th>Students</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@String.Format("{0}", item.EnrollmentDate)</td>
+            <td>@item.StudentCount</td>
+        </tr>
+    }
+</table>
